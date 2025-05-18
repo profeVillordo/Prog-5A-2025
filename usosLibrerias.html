@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <style>
+        .formulario {
+            background-color: #5ae6c7;
+            padding: 20px;
+            border-radius: 5px;
+            width: 300px;
+            margin: auto;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Utilizando libreria Jquery</h1>
+    </header>
+    <section>
+        <h2>Mi Subtitulo</h2>
+        <form class="formulario" target="_blank" id="myForm" method="get" action="procesaDatos.html">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"><br>
+            <label for="">Apellido</label><input type="text" id="apellido" name="apellido"><br>
+            <label for="">Edad</label><input type="text" id="edad" name="edad"><br>
+            <label for="">Sexo</label><input type="text" id="sexo" name="sexo"><br>
+            <label for="">Telefono</label><input type="text" id="telefono" name="telefono"><br>
+            <label for="">Email</label><input type="text" id="email" name="email"><br>
+            <!--<input type="submit" value="Enviar">-->
+            <button onclick="verdatos()" type="submit">Enviar</button>
+            <input type="reset" value="Borrar"><br>
+
+        </form>
+     <!--Un formulario es un contenedor donde puede agregar entradas de datos de distintos tipos(INPUT, SELECT, CHECKBOK, RADIOBUTTON, etc)
+     El formulario debe tener un atributo ACTION que indica la URL a la que se enviaran los datos y el metodo de envio (GET o POST)
+     El formulario puede tener un atributo METHOD que indica el metodo de envio (GET o POST).
+        El formulario puede tener un atributo NAME que indica el nombre del formulario.
+        El formulario puede tener un atributo ID que indica el id del formulario.
+        El formulario puede tener un atributo CLASS que indica la clase del formulario.
+        El formulario puede tener un atributo TARGET que indica la ventana o marco donde se enviaran los datos.
+        El formulario puede tener un atributo ENCTYPE que indica el tipo de codificacion de los datos que se enviaran.     
+     -->
+    
+    
+    </section>
+    <footer>
+        <p>Contacto: <i>
+    </footer>
+    
+</body>
+</html>
+<script>
+    function verdatos(){
+        let isValid = true;
+    
+    // Validar nombre (no vacío)
+    if ($("#nombre").val().trim() === "") {
+        $("#nombre").after("<span class='error-message' style='color:red'>El nombre es obligatorio</span>");
+        isValid = false;
+    }
+
+    if ($("#apellido").val().trim() === "") {
+        $("#apellido").after("<span class='error-message' style='color:red'>El apellido es obligatorio</span>");
+        isValid = false;
+    }
+    const edad = $("#edad").val().trim();
+    if (edad === "" || isNaN(edad) || edad < 18 || edad > 120) {
+        $("#edad").after("<span class='error-message' style='color:red'>La edad debe ser un número entre 18 y 120</span>");
+        isValid = false;
+    }
+
+    const sexo = $("#sexo").val().trim();
+    if (sexo === "" || isNaN(sexo)) {
+        $("#sexo").after("<span class='error-message' style='color:red'>Ingrese un valor correcto </span>");
+        isValid = false;
+    }
+
+    const telefono = $("#telefono").val().trim();
+        if (telefono === "" || isNaN(telefono) ) {
+            $("#telefono").after("<span class='error-message' style='color:red'>Ingrese un valor correcto </span>");
+            isValid = false;
+        }
+    const email= $("#email").val().trim();
+
+    if(email === "" || inNan(email)){
+        $("#email").after("<span class='error-message' style='color:red'>Ingrese un valor correcto </span>");
+        isValid = false;
+    }
+
+
+
+
+        var nombre=$("#nombre").val();
+        var apellido=$("#apellido").val();
+        alert("Nombre: "+nombre+" Apellido: "+apellido);
+    }
+</script>

@@ -23,8 +23,19 @@
             margin: 5px 0;
             border: 1px solid #ccc;
             border-radius: 4px;
-            
-
+        }
+        button {
+            background-color: rgba(203, 197, 45, 1);
+            color: rgb(27, 15, 196);
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .tabla {
+            text-align: center;
+            margin-left: 30%;
+            width: 80%;
         }
     </style>
 </head>
@@ -43,10 +54,29 @@
             <label for="">Telefono</label><input type="text" id="telefono" name="telefono"><br>
             <label for="">Email</label><input type="text" id="email" name="email"><br>
             <!--<input type="submit" value="Enviar">-->
-            <button onclick="verdatos()" type="submit">Enviar</button>
+            <button onclick="verdatos()" type="button">Enviar</button>
             <input type="reset" value="Borrar"><br>
 
         </form>
+        <br><hr>
+        <div class="tabla">
+        <table border="1">
+            <tr>
+                <th colspan="6">Tabla de Datos</th>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Sexo</th>
+                <th>Telefono</th>
+                <th>Email</th>
+            </tr>
+           
+
+        </table>
+    </div>
+
+
      <!--Un formulario es un contenedor donde puede agregar entradas de datos de distintos tipos(INPUT, SELECT, CHECKBOK, RADIOBUTTON, etc)
      El formulario debe tener un atributo ACTION que indica la URL a la que se enviaran los datos y el metodo de envio (GET o POST)
      El formulario puede tener un atributo METHOD que indica el metodo de envio (GET o POST).

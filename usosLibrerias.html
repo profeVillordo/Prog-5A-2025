@@ -71,6 +71,7 @@
                 <th>Telefono</th>
                 <th>Email</th>
             </tr>
+            <tr id="misDatos"></tr>
            
 
         </table>
@@ -116,7 +117,7 @@
     }
 
     const sexo = $("#sexo").val().trim();
-    if (sexo === "" || isNaN(sexo)) {
+    if (sexo === "" || (sexo !== "M" && sexo !== "F")) {
         $("#sexo").after("<span class='error-message' style='color:red'>Ingrese un valor correcto </span>");
         isValid = false;
     }
@@ -128,16 +129,18 @@
         }
     const email= $("#email").val().trim();
 
-    if(email === "" || inNan(email)){
+    if(email === "" || !email.includes("@") || !email.includes(".")){
         $("#email").after("<span class='error-message' style='color:red'>Ingrese un valor correcto </span>");
         isValid = false;
     }
 
+    if (!isValid) {
+        return; // Detener la ejecución si hay errores
+    }
+    $("#misDatos").append("<td>" + $("#nombre").val() + "</td><td>" + $("#apellido").val() + "</td><td>" + $("#edad").val() + "</td><td>" + $("#sexo").val() + "</td><td>" + $("#telefono").val() + "</td><td>" + $("#email").val() + "</td>");
+    $("#myForm").trigger("reset");
 
 
-
-        var nombre=$("#nombre").val();
-        var apellido=$("#apellido").val();
-        alert("Nombre: "+nombre+" Apellido: "+apellido);
+       
     }
 </script>

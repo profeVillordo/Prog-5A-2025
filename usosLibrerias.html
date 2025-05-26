@@ -32,11 +32,33 @@
             border-radius: 4px;
             cursor: pointer;
         }
-        .tabla {
-            text-align: center;
-            margin-left: 30%;
-            width: 80%;
+
+        .contenedor {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+            background-color: #f0f0f0;
+            width: 90%;
+    margin: 0 auto; /* Centra el contenedor */
+    max-height: 400px; /* Altura máxima */
+    overflow-y: auto; /* Scroll vertical cuando sea necesario */
+    border: 1px solid #ddd;
         }
+         .table tr td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
     </style>
 </head>
 <body>
@@ -59,11 +81,13 @@
 
         </form>
         <br><hr>
-        <div class="tabla">
-        <table border="1">
+         <h2>Mis Datos</h2><br>
+        <div class="contenedor">
+           
+        <table id="misDatos" border="1">
             <tr>
                 <th colspan="6">Tabla de Datos</th>
-            <tr>
+            <tr  >
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Edad</th>
@@ -71,8 +95,7 @@
                 <th>Telefono</th>
                 <th>Email</th>
             </tr>
-            <tr id="misDatos"></tr>
-           
+                     
 
         </table>
     </div>
@@ -137,8 +160,8 @@
     if (!isValid) {
         return; // Detener la ejecución si hay errores
     }
-    $("#misDatos").append("<td>" + $("#nombre").val() + "</td><td>" + $("#apellido").val() + "</td><td>" + $("#edad").val() + "</td><td>" + $("#sexo").val() + "</td><td>" + $("#telefono").val() + "</td><td>" + $("#email").val() + "</td>");
-    $("#myForm").trigger("reset");
+    $("#misDatos").append("<tr><td>" + $("#nombre").val() + "</td><td>" + $("#apellido").val() + "</td><td>" + $("#edad").val() + "</td><td>" + $("#sexo").val() + "</td><td>" + $("#telefono").val() + "</td><td>" + $("#email").val() + "</td></tr>");
+    //$("#myForm").trigger("reset");
 
 
        

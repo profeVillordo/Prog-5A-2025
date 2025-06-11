@@ -4,6 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            margin: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #ff0000, #00ff00);
+
+        }
+
+        header{
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul{
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li{
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a{
+            color: white;
+            text-decoration: none;
+        }
+        nav ul li a:hover{
+            text-decoration: underline;
+            background-color: aqua;
+            color: black;
+            padding: 5px;
+        }
+        .contenido{
+            display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+        }
+    </style>
+
 </head>
 <body>
     <header>
@@ -13,7 +58,7 @@
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="sobre-mi.html">Sobre mi</a></li>
+                <li><a href="sobremi.html">Sobre mi</a></li>
             </ul>
         </nav>
         <p>Bienvenido a mi sitio web</p>
@@ -21,20 +66,26 @@
     <section>
         <h2>Mi Contenido</h2>
         <div class="contenido">
+            
             <article>
                 <h3>Texto 1</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat dolores animi, molestias fuga aut eos a voluptate sunt! Excepturi ullam vero magnam sit ad veritatis quam odio, officia consequatur eveniet. </p>
-                <img src="foto1.jpg" alt="">
+                <img src="img/img1.png" alt="">
             </article>
             <article>
                 <h3>texto 2</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, voluptatum. Quisquam, cumque! Quos, cumque? Doloribus, voluptatum. Quisquam, cumque! Doloribus, voluptatum. Quisquam, cumque! Doloribus, voluptatum. Quisquam, cumque!</p>
-                <img src="foto2.jpg" alt="">        
+                <img src="img/img2.png" alt="">        
             </article>
             <article>
                 <h3>Texto 3</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, voluptatum. Quisquam, cumque! Doloribus, voluptatum. Quisquam, cumque! Doloribus, voluptatum. Quisquam, cumque! Doloribus, voluptatum. Quisquam, cumque!</p>
-                <img src="foto3.jpg" alt="">
+                <img src="img/img3.png" alt="">
+            </article>
+            <article>
+                <h3>Texto 3</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, voluptatum. Quisquam, cumque! Doloribus, voluptatum. Quisquam, cumque! Doloribus, voluptatum. Quisquam, cumque! Doloribus, voluptatum. Quisquam, cumque!</p>
+                <img src="img/img4.jpg" alt="">
             </article>
 
         </div>

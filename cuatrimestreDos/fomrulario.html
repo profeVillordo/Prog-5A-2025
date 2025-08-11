@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Ingreso de datos Personales</h1>
+    </header>
+    <section>
+        <h2>Nuevo Cliente</h2>
+        <form method="get" id="nuevoCliente" action="insertacliente.php">
+            <label for="">Apellido y Nombres</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre completo" required><br>
+            <label for="">DNI</label>
+            <input type="number" name="dni" id="dni" placeholder="Ingrese su DNI" required><br>
+            <label for="">IVA</label>
+            <select name="iva" id="iva" required>
+                <option value="">Seleccione una opción</option>
+                <option value="Responsable Inscripto">Responsable Inscripto</option>
+                <option value="Monotributista">Monotributista</option>
+                <option value="Exento">Exento</option>
+                <option value="Consumidor Final">Consumidor Final</option>
+            </select><br>
+            <label for="">Estado Civil</label>
+            <select name="estado_civil" id="estado_civil" required>
+                <option value="">Seleccione una opción</option>
+                <option value="Soltero">Soltero</option>
+                <option value="Casado">Casado</option>
+                <option value="Divorciado">Divorciado</option>
+                <option value="Viudo">Viudo</option>
+                <option value="Union de Hecho">Unión de Hecho</option>
+            </select><br>
+            <label for="">Fecha de Nacimiento</label>
+            <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" required><br>
+                </form>
+
+    </section>
+</body>
+</html>

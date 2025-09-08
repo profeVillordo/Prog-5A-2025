@@ -1,0 +1,25 @@
+body{
+    background: yellowgreen;
+}
+input[type="text"],input[type="email"],input[type="number"],input[type="date"],textarea,select{
+    padding: 12px 16px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+.separador{
+    margin-bottom: 20px;
+}
+button{
+    background: green;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+.error{
+    border: 2px solid red;
+    background: pink;
+    color: red;
+}
+/* Una clase o class es un conjunto de reglas CSS que se aplican a uno o más elementos HTML. Se define con un punto (.) seguido del nombre de la clase. */
+/* Por ejemplo, en el código anterior, .error es una clase que define un estilo para los elementos que tienen la clase "error". */

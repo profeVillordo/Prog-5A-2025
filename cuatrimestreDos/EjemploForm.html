@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro Curso Online</title>
+</head>
+<body>
+  <h1>Inscripción a Curso Online</h1>
+  <form method="post" action="procesarRegistro.php">
+    
+    <!-- 1. Nombre Completo -->
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+    
+    <!-- 2. Número de Pasaporte -->
+    <label for="pasaporte">Pasaporte:</label>
+    <input type="text" id="pasaporte" name="pasaporte"><br><br>
+    
+    <!-- 3. Nacionalidad -->
+    <label for="nacionalidad">Nacionalidad:</label>
+    <select id="nacionalidad" name="nacionalidad">
+      <option value="">Seleccione...</option>
+      <option value="arg">Argentina</option>
+      <option value="bra">Brasil</option>
+      <option value="chi">Chile</option>
+      <option value="uru">Uruguay</option>
+    </select><br><br>
+    
+    <!-- 4. Profesión -->
+    <label for="profesion">Profesión:</label>
+    <input type="text" id="profesion" name="profesion"><br><br>
+    
+    <!-- 5. Nivel de estudios -->
+    <label for="estudios">Nivel de estudios:</label>
+    <select id="estudios" name="estudios">
+      <option value="">Seleccione...</option>
+      <option value="sec">Secundario</option>
+      <option value="ter">Terciario</option>
+      <option value="uni">Universitario</option>
+      <option value="pos">Posgrado</option>
+    </select><br><br>
+    
+    <!-- 6. Idiomas que domina -->
+    <label>Idiomas:</label><br>
+    <input type="checkbox" name="idiomas" value="ingles"> Inglés
+    <input type="checkbox" name="idiomas" value="portugues"> Portugués
+    <input type="checkbox" name="idiomas" value="frances"> Francés
+    <input type="checkbox" name="idiomas" value="aleman"> Alemán<br><br>
+    
+    <!-- 7. Curso elegido -->
+    <label for="curso">Curso a inscribirse:</label>
+    <select id="curso" name="curso">
+      <option value="html">HTML y CSS</option>
+      <option value="js">JavaScript</option>
+      <option value="python">Python</option>
+      <option value="sql">SQL</option>
+    </select><br><br>
+    
+    <!-- 8. Fecha de inicio -->
+    <label for="fecha_inicio">Fecha preferida de inicio:</label>
+    <input type="date" id="fecha_inicio" name="fecha_inicio"><br><br>
+    
+    <!-- 9. Horario disponible -->
+    <label for="horario">Horario preferido:</label>
+    <input type="time" id="horario" name="horario"><br><br>
+    
+    <!-- 10. Foto de perfil -->
+    <label for="foto">Subir foto de perfil:</label>
+    <input type="file" id="foto" name="foto"><br><br>
+    
+    <!-- 11. Página web personal -->
+    <label for="web">Página web / Portafolio:</label>
+    <input type="url" id="web" name="web"><br><br>
+    
+    <!-- 12. Comentarios -->
+    <label for="comentarios">Comentarios adicionales:</label><br>
+    <textarea id="comentarios" name="comentarios" rows="4" cols="40"></textarea><br><br>
+    
+    <!-- Botón de envío -->
+    <button type="submit">Enviar Inscripción</button>
+  </form>
+</body>
+</html>
